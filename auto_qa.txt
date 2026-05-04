@@ -1,0 +1,240 @@
+Fråga: Vad är AI?
+Svar: AI är ett ämne som kan förklaras på ett enkelt och tydligt sätt.
+Slut.
+
+Fråga: Kan du förklara AI enkelt?
+Svar: AI kan beskrivas som något viktigt att förstå i vardagen eller samhället.
+Slut.
+
+Fråga: Varför är AI viktigt?
+Svar: AI är viktigt eftersom det påverkar hur människor lever, lär sig eller fattar beslut.
+Slut.
+
+Fråga: Hur fungerar AI?
+Svar: AI fungerar genom olika delar som samverkar på ett visst sätt.
+Slut.
+
+Fråga: Vad är Python?
+Svar: Python är ett ämne som kan förklaras på ett enkelt och tydligt sätt.
+Slut.
+
+Fråga: Kan du förklara Python enkelt?
+Svar: Python kan beskrivas som något viktigt att förstå i vardagen eller samhället.
+Slut.
+
+Fråga: Varför är Python viktigt?
+Svar: Python är viktigt eftersom det påverkar hur människor lever, lär sig eller fattar beslut.
+Slut.
+
+Fråga: Hur fungerar Python?
+Svar: Python fungerar genom olika delar som samverkar på ett visst sätt.
+Slut.
+
+Fråga: Vad är programmering?
+Svar: programmering är ett ämne som kan förklaras på ett enkelt och tydligt sätt.
+Slut.
+
+Fråga: Kan du förklara programmering enkelt?
+Svar: programmering kan beskrivas som något viktigt att förstå i vardagen eller samhället.
+Slut.
+
+Fråga: Varför är programmering viktigt?
+Svar: programmering är viktigt eftersom det påverkar hur människor lever, lär sig eller fattar beslut.
+Slut.
+
+Fråga: Hur fungerar programmering?
+Svar: programmering fungerar genom olika delar som samverkar på ett visst sätt.
+Slut.
+
+Fråga: Vad är internet?
+Svar: internet är ett ämne som kan förklaras på ett enkelt och tydligt sätt.
+Slut.
+
+Fråga: Kan du förklara internet enkelt?
+Svar: internet kan beskrivas som något viktigt att förstå i vardagen eller samhället.
+Slut.
+
+Fråga: Varför är internet viktigt?
+Svar: internet är viktigt eftersom det påverkar hur människor lever, lär sig eller fattar beslut.
+Slut.
+
+Fråga: Hur fungerar internet?
+Svar: internet fungerar genom olika delar som samverkar på ett visst sätt.
+Slut.
+
+Fråga: Vad är datorer?
+Svar: datorer är ett ämne som kan förklaras på ett enkelt och tydligt sätt.
+Slut.
+
+Fråga: Kan du förklara datorer enkelt?
+Svar: datorer kan beskrivas som något viktigt att förstå i vardagen eller samhället.
+Slut.
+
+Fråga: Varför är datorer viktigt?
+Svar: datorer är viktigt eftersom det påverkar hur människor lever, lär sig eller fattar beslut.
+Slut.
+
+Fråga: Hur fungerar datorer?
+Svar: datorer fungerar genom olika delar som samverkar på ett visst sätt.
+Slut.
+
+Fråga: Vad är Sverige?
+Svar: Sverige är ett ämne som kan förklaras på ett enkelt och tydligt sätt.
+Slut.
+
+Fråga: Kan du förklara Sverige enkelt?
+Svar: Sverige kan beskrivas som något viktigt att förstå i vardagen eller samhället.
+Slut.
+
+Fråga: Varför är Sverige viktigt?
+Svar: Sverige är viktigt eftersom det påverkar hur människor lever, lär sig eller fattar beslut.
+Slut.
+
+Fråga: Hur fungerar Sverige?
+Svar: Sverige fungerar genom olika delar som samverkar på ett visst sätt.
+Slut.
+
+Fråga: Vad är Stockholm?
+Svar: Stockholm är ett ämne som kan förklaras på ett enkelt och tydligt sätt.
+Slut.
+
+Fråga: Kan du förklara Stockholm enkelt?
+Svar: Stockholm kan beskrivas som något viktigt att förstå i vardagen eller samhället.
+Slut.
+
+Fråga: Varför är Stockholm viktigt?
+Svar: Stockholm är viktigt eftersom det påverkar hur människor lever, lär sig eller fattar beslut.
+Slut.
+
+Fråga: Hur fungerar Stockholm?
+Svar: Stockholm fungerar genom olika delar som samverkar på ett visst sätt.
+Slut.
+
+Fråga: Vad är EU?
+Svar: EU är ett ämne som kan förklaras på ett enkelt och tydligt sätt.
+Slut.
+
+Fråga: Kan du förklara EU enkelt?
+Svar: EU kan beskrivas som något viktigt att förstå i vardagen eller samhället.
+Slut.
+
+Fråga: Varför är EU viktigt?
+Svar: EU är viktigt eftersom det påverkar hur människor lever, lär sig eller fattar beslut.
+Slut.
+
+Fråga: Hur fungerar EU?
+Svar: EU fungerar genom olika delar som samverkar på ett visst sätt.
+Slut.
+
+Fråga: Vad är fotboll?
+Svar: fotboll är ett ämne som kan förklaras på ett enkelt och tydligt sätt.
+Slut.
+
+Fråga: Kan du förklara fotboll enkelt?
+Svar: fotboll kan beskrivas som något viktigt att förstå i vardagen eller samhället.
+Slut.
+
+Fråga: Varför är fotboll viktigt?
+Svar: fotboll är viktigt eftersom det påverkar hur människor lever, lär sig eller fattar beslut.
+Slut.
+
+Fråga: Hur fungerar fotboll?
+Svar: fotboll fungerar genom olika delar som samverkar på ett visst sätt.
+Slut.
+
+Fråga: Vad är klimat?
+Svar: klimat är ett ämne som kan förklaras på ett enkelt och tydligt sätt.
+Slut.
+
+Fråga: Kan du förklara klimat enkelt?
+Svar: klimat kan beskrivas som något viktigt att förstå i vardagen eller samhället.
+Slut.
+
+Fråga: Varför är klimat viktigt?
+Svar: klimat är viktigt eftersom det påverkar hur människor lever, lär sig eller fattar beslut.
+Slut.
+
+Fråga: Hur fungerar klimat?
+Svar: klimat fungerar genom olika delar som samverkar på ett visst sätt.
+Slut.
+
+Fråga: Vad är ekonomi?
+Svar: ekonomi är ett ämne som kan förklaras på ett enkelt och tydligt sätt.
+Slut.
+
+Fråga: Kan du förklara ekonomi enkelt?
+Svar: ekonomi kan beskrivas som något viktigt att förstå i vardagen eller samhället.
+Slut.
+
+Fråga: Varför är ekonomi viktigt?
+Svar: ekonomi är viktigt eftersom det påverkar hur människor lever, lär sig eller fattar beslut.
+Slut.
+
+Fråga: Hur fungerar ekonomi?
+Svar: ekonomi fungerar genom olika delar som samverkar på ett visst sätt.
+Slut.
+
+Fråga: Vad är demokrati?
+Svar: demokrati är ett ämne som kan förklaras på ett enkelt och tydligt sätt.
+Slut.
+
+Fråga: Kan du förklara demokrati enkelt?
+Svar: demokrati kan beskrivas som något viktigt att förstå i vardagen eller samhället.
+Slut.
+
+Fråga: Varför är demokrati viktigt?
+Svar: demokrati är viktigt eftersom det påverkar hur människor lever, lär sig eller fattar beslut.
+Slut.
+
+Fråga: Hur fungerar demokrati?
+Svar: demokrati fungerar genom olika delar som samverkar på ett visst sätt.
+Slut.
+
+Fråga: Vad är historia?
+Svar: historia är ett ämne som kan förklaras på ett enkelt och tydligt sätt.
+Slut.
+
+Fråga: Kan du förklara historia enkelt?
+Svar: historia kan beskrivas som något viktigt att förstå i vardagen eller samhället.
+Slut.
+
+Fråga: Varför är historia viktigt?
+Svar: historia är viktigt eftersom det påverkar hur människor lever, lär sig eller fattar beslut.
+Slut.
+
+Fråga: Hur fungerar historia?
+Svar: historia fungerar genom olika delar som samverkar på ett visst sätt.
+Slut.
+
+Fråga: Vad är hälsa?
+Svar: hälsa är ett ämne som kan förklaras på ett enkelt och tydligt sätt.
+Slut.
+
+Fråga: Kan du förklara hälsa enkelt?
+Svar: hälsa kan beskrivas som något viktigt att förstå i vardagen eller samhället.
+Slut.
+
+Fråga: Varför är hälsa viktigt?
+Svar: hälsa är viktigt eftersom det påverkar hur människor lever, lär sig eller fattar beslut.
+Slut.
+
+Fråga: Hur fungerar hälsa?
+Svar: hälsa fungerar genom olika delar som samverkar på ett visst sätt.
+Slut.
+
+Fråga: Vad är träning?
+Svar: träning är ett ämne som kan förklaras på ett enkelt och tydligt sätt.
+Slut.
+
+Fråga: Kan du förklara träning enkelt?
+Svar: träning kan beskrivas som något viktigt att förstå i vardagen eller samhället.
+Slut.
+
+Fråga: Varför är träning viktigt?
+Svar: träning är viktigt eftersom det påverkar hur människor lever, lär sig eller fattar beslut.
+Slut.
+
+Fråga: Hur fungerar träning?
+Svar: träning fungerar genom olika delar som samverkar på ett visst sätt.
+Slut.
+

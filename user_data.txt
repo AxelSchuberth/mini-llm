@@ -1,0 +1,377 @@
+Fråga: I sverige bor det?
+Svar: Ja, sverige är ett nordiskt land i norra europa och är en del av norden.
+Slut.
+
+Fråga: Hur många bor i Sverige
+Svar: Teknik kan förändra hur människor lever, arbetar och kommunicerar.
+Slut.
+
+Fråga: Hur många bor i Sverige
+Svar: Sveriges befolkning är cirka 10 miljoner invånare.
+Slut.
+
+Fråga: Vad är AI?
+Svar: Ai betyder artificiell intelligens och handlar om datorer som kan lösa uppgifter som brukar kräva mänsklig intelligens.
+Slut.
+
+Fråga: Vad är Internet?
+Svar: Internet är ett globalt nätverk som kopplar ihop datorer och gör det möjligt att dela information.
+Slut.
+
+Fråga: Vad är en familj?
+Svar: En familj är en grupp människor som hör ihop.
+Slut.
+
+Fråga: Vad är en bok?
+Svar: En bok är en samling text eller bilder som ofta är tryckt eller digital.
+Slut.
+
+Fråga: Vad är du?
+Svar: Localhost är den egna datorn när den används som server under utveckling.
+Slut.
+
+Fråga: Vad är LLM?
+Svar: Automatisering och köra python-kod. är github? för att göra förutsägelser eller skapa svar.
+Slut.
+
+Fråga: Vad är Sverige?
+Svar: Sverige är ett land i norra europa och är en del av norden.
+Slut.
+
+Fråga: Vad är livet?
+Svar: Localhost är den egna datorn när den används som server under utveckling.
+Slut.
+
+Fråga: Vad är djur?
+Svar: En levande organism
+Slut.
+
+Fråga: Vad är djur?
+Svar: En levande varelse.
+Slut.
+
+Fråga: Vad är Sverige
+Svar: Ett land i Scandinavien.
+Slut.
+
+Fråga: Vad är Sverige?
+Svar: Ett land i Norra Europa.
+Slut.
+
+Fråga: Vad är Sverige?
+Svar: Ett land i norden.
+Slut.
+
+Fråga: Vad är Sverige?
+Svar: Sverige är ett land i norra europa.
+Slut.
+
+Fråga: Vad är Sverige
+Svar: Vanlig programmering följer fasta regler, medan ai lär sig mönster från data och kan anpassa sig till nya situationer.
+Slut.
+
+Fråga: Vad är Sverige?
+Svar: Sverige är ett land i norra europa.
+Slut.
+
+Fråga: Vad är Sverige?
+Svar: Sverige är ett land i norra europa.
+Slut.
+
+Fråga: Vad är Sverige?
+Svar: Sverige är ett land i norra europa.
+Slut.
+
+Fråga: Vad är Sverige?
+Svar: Sverige är ett land i europa.
+Slut.
+
+Fråga: Vad är Sverige?
+Svar: Sverige är ett land i norra europa.
+Slut.
+
+Fråga: Vad är Sverige?
+Svar: Sverige är ett land i norra europa.
+Slut.
+
+Fråga: Vad är Sverige?
+Svar: Sverige är ett land i norra europa.
+Slut.
+
+Fråga: Vad är Sverige?
+Svar: Sverige är ett land i norra europa.
+Slut.
+
+Fråga: Vad är Sverige?
+Svar: Sverige är ett land i norra europa.
+Slut.
+
+
+Fråga: Vad är AI?
+Svar: Ai kan verka smart eftersom den hittar mönster i data, men den förstår inte världen på samma sätt som en människa.
+Slut.
+
+Fråga: Vad är Sverige?
+Svar: Sverige är ett nordiskt land i norra europa och är en del av norden.
+Slut.
+
+Fråga: Vad är Sverige?
+Svar: Sverige är ett nordiskt land i norra europa.
+Slut.
+
+Fråga: Vad är Sverige?
+Svar: Sverige är ett nordiskt land i norra europa.
+Slut.
+
+Fråga: Vad är Sverige?
+Svar: Sverige är ett nordiskt land i norra europa.
+Slut.
+
+Fråga: Vad är AI?
+Svar: AI är en del av artificiell intelligens.
+Slut.
+
+Fråga: Vad är AI?
+Svar: AI är en del av artificiell intelligens.
+Slut.
+
+Fråga: Vad är AI?
+Svar: AI är en del av artificiell intelligens.
+Slut.
+
+Fråga: Vad är en människa?
+Svar: En människa är en person som har en personligitet och en fysisk form.
+Slut.
+
+Fråga: Vad är ett djur?
+Svar: Ett djur är en levande organism.
+Slut.
+
+Fråga: Vad är ett djur?
+Svar: Ett program som användaren ser och använder.
+Slut.
+
+Fråga: Vad är en människa
+Svar: Ett program som användaren ser och använder.
+Slut.
+
+Fråga: Vad är en människa?
+Svar: Ett program som användaren ser och använder.
+Slut.
+
+Fråga: Vad är Sverige?
+Svar: Sverige att information på nya sätt, men den förstår inte kreativitet som människor gör.
+Slut.
+
+Fråga: Vad är Sverige?
+Svar: Sverige att ett land i norra europa och ligger i norra europa på den skandinaviska halvön.
+Slut.
+
+Fråga: Vad är Sverige?
+Svar: Sverige att ett land i norra europa och ligger i norra europa på den skandinaviska halvön.
+Slut.
+
+Fråga: Vad är Stockholm?
+Svar: 
+Slut.
+
+Fråga: Vad är Stockholm?
+Svar: 
+Slut.
+
+Fråga: Vad är Stockholm?
+Svar: 
+Slut.
+
+Fråga: Vad är sverige?
+Svar: Sverige att ett land i norra europa och ligger i norra europa på den skandinaviska halvön.
+Slut.
+
+Fråga: Vad har hänt med kriget?
+Svar: Vilket krig?
+Slut.
+
+Fråga: Vad har hänt med kriget?
+Svar: Sveriges huvudspråk är svenska.
+Slut.
+
+Fråga: Vad har hänt med kriget?
+Svar: Det betyder att relatera till.
+Slut.
+
+Fråga: Vad är Sverige?
+Svar: Sverige att ett land i norra europa och ligger i norra europa på den skandinaviska halvön.
+Slut.
+
+Fråga: Vad är en AI?
+Svar: En dator tränas på exempel ett sätt med många exempel och bearbeta information.
+Slut.
+
+Fråga: Vad är en AI?
+Svar: En artificiell robott med intelligens.
+Slut.
+
+Fråga: Vad är en familj?
+Svar: En samling människor som älskar varandra.
+Slut.
+
+Fråga: Vad är en familj?
+Svar: En samling människor som är släkt
+Slut.
+
+Fråga: Vad är ett djur?
+Svar: En levande organism.
+Slut.
+
+Fråga: Vad är ett djur?
+Svar: Ett program som användaren ser och använder.
+Slut.
+
+Fråga: Vad är en familj?
+Svar: Det är ett
+Slut.
+
+Fråga: Vad är en familj?
+Svar: Det är ett
+Slut.
+
+Fråga: Vad är natur?
+Svar: 
+Slut.
+
+Fråga: Hur många bor i Sverige?
+Svar: Sveriges huvudspråk är svenska.
+Slut.
+
+Fråga: Hur många bor i Sverige?
+Svar: Sveriges huvudspråk är svenska.
+Slut.
+
+Fråga: Vad är Sverige?
+Svar: Sverige är ett nordiskt land med stora skogar, många sjöar och en befolkning på omkring 10 miljoner människor.
+Slut.
+
+Fråga: har du snus?
+Svar: Det möjligt att simulering? kan automatisera uppgifter, analysera stora mängder data.
+Slut.
+
+Fråga: 
+Svar: Ett program som användaren ser och använder.
+Slut.
+
+Fråga: vad är en AI?
+Svar: Det är ett
+Slut.
+
+Fråga: vad är en AI?
+Svar: Det är ett
+Slut.
+
+Fråga: Vad är Sverige?
+Svar: Sverige är ett nordiskt land med stora skogar, många sjöar och en befolkning på omkring 10 miljoner människor.
+Slut.
+
+Fråga: Hur många bor i Sverige?
+Svar: Sveriges huvudspråk är svenska.
+Slut.
+
+Fråga: Vilket språk talar man i Sverige?
+Svar: Svenska är huvudspråket i Sverige, men det finns även flera minoritetsspråk samt hög andel som talar engelska.
+Slut.
+
+Fråga: Vilket språk talar man i Sverige?
+Svar: Svenska är huvudspråket i Sverige, men det finns även flera minoritetsspråk samt hög andel som talar engelska.
+Slut.
+
+Fråga: Vilket språk talar man i Sverige?
+Svar: Svenska är huvudspråket i Sverige, men det finns även flera minoritetsspråk samt hög andel som talar engelska.
+Slut.
+
+Fråga: Hur många bor i Sverige?
+Svar: 10 miljoner människor.
+Slut.
+
+Fråga: Hur många bor i Sverige?
+Svar: Sveriges befolkning är stockholm.
+Slut.
+
+Fråga: Hur många bor i Sverige?
+Svar: Sveriges befolkning är cirka 10 miljoner invånare.
+Slut.
+
+Fråga: Hur många bor i Sverige?
+Svar: Sveriges befolkning är cirka 10 miljoner invånare.
+Slut.
+
+Fråga: Hur många bor i Sverige?
+Svar: Sveriges befolkning är cirka 10 miljoner invånare.
+Slut.
+
+Fråga: Hur många bor i Sverige?
+Svar: Sveriges befolkning är cirka 10 miljoner invånare.
+Slut.
+
+Fråga: Hur många bor i Sverige?
+Svar: Sveriges befolkning är cirka 10 miljoner invånare.
+Slut.
+
+Fråga: Vilket språk talar man i Sverige?
+Svar: Sverige är en del av verkligheten.
+Slut.
+
+Fråga: Vilket språk talar man i Sverige?
+Svar: Sverige är en del av norden.
+Slut.
+
+Fråga: Vilket språk talar man i Sverige?
+Svar: Sverige är en del av verkligheten.
+Slut.
+
+Fråga: Vilket språk talar man i Sverige?
+Svar: Sverige är en del av verkligheten.
+Slut.
+
+Fråga: Vilka språk talar man i Sverige?
+Svar: Sverige är en samling saltvatten.
+Slut.
+
+Fråga: Hur många bor i Sverige?
+Svar: Sveriges befolkning är cirka 10 miljoner invånare.
+Slut.
+
+Fråga: vad är Stockholm?
+Svar: Ja, ai gör som blir digitala.
+Slut.
+
+Fråga: Vad är en AI?
+Svar: En modell lär sig språk genom att analysera stora mängder text och lära sig vilka ord som brukar komma tillsammans.
+Slut.
+
+Fråga: Vad är ett djur?
+Svar: Ett levande organism
+Slut.
+
+Fråga: Vad är ett djur?
+Svar: En levande organism
+Slut.
+
+Fråga: Vad är Malmö?
+Svar: Sveriges 3rd största stad
+Slut.
+
+Fråga: Vad är en familj?
+Svar: En samling människor som är med varandra.
+Slut.
+
+Fråga: vad är en familj
+Svar: En samling människor som är med varandra.
+Slut.
+
+Fråga: Vad är en familj?
+Svar: En samling människor som är med varandra.
+Slut.
+
+Fråga: Vad tycker du om mig?
+Svar: Kvalitet beskriver hur bra något är jämfört med vad som förväntas.
+Slut.
+
