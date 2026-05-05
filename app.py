@@ -4,8 +4,15 @@ import torch.nn as nn
 import torch.nn.functional as F
 import json
 import re
+import numpy as np
+from sentence_transformers import SentenceTransformer
 
 app = Flask(__name__)
+
+# ----------------------------
+# Embeddings
+# ----------------------------
+embedding_model = SentenceTransformer("all-MiniLM-L6-v2")
 
 # ----------------------------
 # Inställningar
@@ -65,7 +72,7 @@ def apply_memory(question, topic):
         if topic == "sverige":
             return "vad är sveriges huvudstad"
 
-    if question in ["hur många bor där", "befolkning"]:
+    if question in ["hur många bor där", "hur många bor det där", "befolkning"]:
         if topic == "sverige":
             return "hur många bor i sverige"
 
@@ -76,6 +83,7 @@ def apply_memory(question, topic):
 # ----------------------------
 class Tokenizer:
     def __init__(self, vocab):
+        self.vocab = vocab
         self.stoi = {w: i for i, w in enumerate(vocab)}
         self.itos = {i: w for i, w in enumerate(vocab)}
 
@@ -83,7 +91,8 @@ class Tokenizer:
         return re.findall(r"\w+", text.lower())
 
     def encode(self, text):
-        return [self.stoi[w] for w in self.tokenize(text) if w in self.stoi]
+        tokens = self.tokenize(text)
+        return [self.stoi[w] for w in tokens if w in self.stoi]
 
     def decode(self, indices):
         return " ".join([self.itos[i] for i in indices if i in self.itos])
@@ -98,18 +107,21 @@ tokenizer = Tokenizer(vocab)
 vocab_size = len(vocab)
 
 # ----------------------------
-# Ladda data (RAG)
+# Ladda Q&A + embeddings
 # ----------------------------
 qa_pairs = []
+qa_embeddings = None
 
 def load_qa():
-    global qa_pairs
+    global qa_pairs, qa_embeddings
+
     qa_pairs = []
 
     with open("data_qa.txt", "r", encoding="utf-8") as f:
         content = f.read().lower()
 
     blocks = content.split("slut.")
+
     for block in blocks:
         if "fråga:" in block and "svar:" in block:
             try:
@@ -119,44 +131,25 @@ def load_qa():
             except:
                 pass
 
+    questions = [q for q, _ in qa_pairs]
+    qa_embeddings = embedding_model.encode(questions, normalize_embeddings=True)
+
 load_qa()
 
-# ----------------------------
-# Similarity (bättre)
-# ----------------------------
-STOPWORDS = {
-    "vad", "är", "en", "ett", "i", "på", "och", "som",
-    "det", "den", "de", "kan", "förklara", "kort", "enkelt"
-}
-
-def important_words(text):
-    words = re.findall(r"\w+", text.lower())
-    return {w for w in words if w not in STOPWORDS}
-
-def similarity(a, b):
-    a_words = important_words(a)
-    b_words = important_words(b)
-
-    if len(a_words) == 0 or len(b_words) == 0:
-        return 0
-
-    return len(a_words & b_words) / len(a_words | b_words)
-
 def find_best_match(user_question):
-    best_score = 0
-    best_answer = None
+    user_embedding = embedding_model.encode([user_question], normalize_embeddings=True)[0]
+    similarities = np.dot(qa_embeddings, user_embedding)
 
-    for q, a in qa_pairs:
-        score = similarity(user_question, q)
+    best_index = int(np.argmax(similarities))
+    best_score = float(similarities[best_index])
 
-        if score > best_score:
-            best_score = score
-            best_answer = a
+    best_question = qa_pairs[best_index][0]
+    best_answer = qa_pairs[best_index][1]
 
-    return best_score, best_answer
+    return best_score, best_question, best_answer
 
 # ----------------------------
-# Modell
+# Modell - MATCHAR TRAIN.PY
 # ----------------------------
 class Head(nn.Module):
     def __init__(self, head_size):
@@ -222,7 +215,7 @@ class MiniTransformer(nn.Module):
         self.ln_f = nn.LayerNorm(n_embd)
         self.lm_head = nn.Linear(n_embd, vocab_size)
 
-    def forward(self, x):
+    def forward(self, x, targets=None):
         B, T = x.shape
 
         tok_emb = self.token_embedding(x)
@@ -232,7 +225,9 @@ class MiniTransformer(nn.Module):
         x = self.blocks(x)
         x = self.ln_f(x)
 
-        return self.lm_head(x)
+        logits = self.lm_head(x)
+
+        return logits
 
     def generate(self, x):
         for _ in range(max_new_tokens):
@@ -253,14 +248,14 @@ class MiniTransformer(nn.Module):
         return x
 
 # ----------------------------
-# Ladda modell
+# Ladda modellen
 # ----------------------------
 model = MiniTransformer().to(device)
 model.load_state_dict(torch.load("model_qa.pth", map_location=device))
 model.eval()
 
 # ----------------------------
-# Flask route
+# Flask
 # ----------------------------
 @app.route("/", methods=["GET", "POST"])
 def home():
@@ -268,6 +263,7 @@ def home():
 
     svar = ""
     källa = ""
+    debug_info = ""
 
     if request.method == "POST":
         fråga_original = request.form["fråga"]
@@ -277,18 +273,16 @@ def home():
         if new_topic is not None:
             last_topic = new_topic
 
-        fråga = apply_memory(fråga, last_topic)
+        fråga_med_minne = apply_memory(fråga, last_topic)
 
-        score, answer = find_best_match(fråga)
+        score, matched_question, answer = find_best_match(fråga_med_minne)
 
-        # 🔥 RAG
-        if score >= 0.75:
+        if score >= 0.45:
             svar = answer.strip()
-            källa = "📚 Data"
-
-        # 🤖 AI fallback
+            källa = "📚 Data (embeddings)"
+            debug_info = f"Match: {matched_question} | score: {score:.2f}"
         else:
-            prompt = f"Fråga: {fråga}\nSvar:"
+            prompt = f"Fråga: {fråga_med_minne}\nSvar:"
             encoded = tokenizer.encode(prompt)
 
             if len(encoded) == 0:
@@ -307,6 +301,7 @@ def home():
 
                 svar = text.strip()
                 källa = "🤖 AI"
+                debug_info = "AI fallback"
 
         if len(svar) > 0:
             svar = svar[0].upper() + svar[1:]
@@ -318,15 +313,16 @@ def home():
     <title>Mini-LLM</title>
 </head>
 <body style="font-family: Arial; text-align:center; margin-top:100px;">
-    <h1>Mini-LLM</h1>
+    <h1>Mini-LLM Embeddings</h1>
 
     <form method="post">
-        <input name="fråga" style="width:350px; padding:10px;" placeholder="Ställ en fråga..." />
+        <input name="fråga" style="width:370px; padding:10px;" placeholder="Ställ en fråga..." />
         <button type="submit">Fråga</button>
     </form>
 
     <p style="margin-top:20px; font-size:18px;">{svar}</p>
     <p style="font-size:14px; color:gray;">Källa: {källa}</p>
+    <p style="font-size:12px; color:gray;">{debug_info}</p>
 </body>
 </html>
 """
