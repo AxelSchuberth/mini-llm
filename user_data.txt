@@ -503,3 +503,205 @@ Fråga: kan du något
 Svar: Self attention är en ai lär sig från data och lära sig hitta mönster som den sedan använder för att
 Slut.
 
+Fråga: kan du något
+Normaliserad fråga: kan du något
+Svar: Self attention är en teknik som låter modellen väga olika delar av
+Slut.
+
+Fråga: va e sverige?
+Normaliserad fråga: vad är sverige
+Svar: Sverige är ett land i norra europa
+Slut.
+
+Fråga: va e ai!!!
+Normaliserad fråga: vad är ai
+Svar: Enkelt sagt är ai teknik som gör att datorer kan lära sig av data och hjälpa till med saker som
+Slut.
+
+Fråga: vae svergie
+Normaliserad fråga: vae sverige
+Svar: Sverige är ett land i norra europa
+Slut.
+
+Fråga: va ä stokholm
+Normaliserad fråga: vad ä stockholm
+Svar: Stockholm är sveriges huvudstad och största stad
+Slut.
+
+Fråga: var talar man svenska
+Normaliserad fråga: var talar man svenska
+Svar: Sverige ligger i norra europa på den skandinaviska halvön
+Slut.
+
+Fråga: svenska
+Normaliserad fråga: svenska
+Svar: Svenska är ett språk som talas främst i sverige och delar av finland
+Slut.
+
+Fråga: svnska
+Normaliserad fråga: svnska
+Svar: En tokenizer gör om text till tokens så att modellen kan arbeta med texten som siffror
+Slut.
+
+Fråga: vae ai
+Normaliserad fråga: vae ai
+Svar: Ai används till exempel inom sjukvård transport ekonomi och teknik för att analysera data och fatta be
+Slut.
+
+Fråga: vad är ai
+Normaliserad fråga: vad är ai
+Svar: Enkelt sagt är ai teknik som gör att datorer kan lära sig av data och hjälpa till med saker som
+Slut.
+
+Fråga: vae vetnskap
+Normaliserad fråga: vae vetnskap
+Svar: En film är en rörlig bild som berättar en historia
+Slut.
+
+Fråga: vad är vetnskap
+Normaliserad fråga: vad är vetnskap
+Svar: Kunskap är information som man har förstått och kan använda
+Slut.
+
+Fråga: 
+Normaliserad fråga: 
+Svar: En mini llm är en liten språkmodell som fungerar enligt liknande principer som större modeller men med mycket mindre kapacitet
+Slut.
+
+Fråga: vad är sverige?
+Normaliserad fråga: vad är sverige
+Svar: Sverige är ett land i norra europa
+Slut.
+
+Fråga: vad är stockholm?
+Normaliserad fråga: vad är stockholm
+Svar: Stockholm är sveriges huvudstad och största stad
+Slut.
+
+Fråga: Hur många bor i stockholm
+Normaliserad fråga: hur många bor i stockholm
+Svar: Stockholm är sveriges huvudstad och största stad
+Slut.
+
+Fråga: Hur många bor i stockholm
+Normaliserad fråga: hur många bor i stockholm
+Svar: Stockholm är sveriges huvudstad och största stad
+Slut.
+
+Fråga: Hur många bor i Stockholm
+Normaliserad fråga: hur många bor i stockholm
+Svar: Stockholm är sveriges huvudstad och största stad
+Slut.
+
+Fråga: Hur många bor i Sverige?
+Normaliserad fråga: hur många bor i sverige
+Svar: Sveriges befolkning är cirka 10 miljoner
+Slut.
+
+Fråga: Hur många bor i Stockholm?
+Normaliserad fråga: hur många bor i stockholm
+Svar: Stockholm är sveriges huvudstad och största stad
+Slut.
+
+Fråga: vad är huvudstaden?
+Normaliserad fråga: vad är huvudstaden
+Fråga med minne: vad är huvudstaden
+Svar: Python är ett populärt programmeringsspråk som är känt för att vara enkelt att läsa och använda
+Slut.
+
+Fråga: vad är sverige?
+Normaliserad fråga: vad är sverige
+Fråga med minne: vad är sverige
+Svar: Sverige är ett land i norra europa.
+Slut.
+
+Fråga: vad är huvudstaden?
+Normaliserad fråga: vad är huvudstaden
+Fråga med minne: vad är sveriges huvudstad
+Svar: Sveriges huvudstad är stockholm.
+Slut.
+
+Fråga: hur många bor där?
+Normaliserad fråga: hur många bor där
+Fråga med minne: hur många bor i sverige
+Svar: Sveriges befolkning är cirka 10 miljoner.
+Slut.
+
+Fråga: vad är ai
+Normaliserad fråga: vad är ai
+Fråga med minne: vad är ai
+Svar: Ai är teknik som gör att datorer kan efterlikna mänskligt tänkande.
+Slut.
+
+Fråga: vad är ai
+Normaliserad fråga: vad är ai
+Fråga med minne: vad är ai
+Svar: Ai är teknik som gör att datorer kan efterlikna mänskligt tänkande.
+Slut.
+
+Fråga: Vad är sverige?
+Normaliserad fråga: vad är sverige
+Fråga med minne: vad är sverige
+Svar: Sverige är ett land i norra europa.
+Slut.
+
+Fråga: Vad är luleå
+Normaliserad fråga: vad är luleå
+Fråga med minne: vad är luleå
+Svar: Luleå är en stad i norrbotten vid bottenviken.
+Slut.
+
+Fråga: vad är göteborg
+Normaliserad fråga: vad är göteborg
+Fråga med minne: vad är göteborg
+Svar: Göteborg är sveriges näst största stad och ligger på västkusten.
+Slut.
+
+Fråga: hur många bor där
+Normaliserad fråga: hur många bor där
+Fråga med minne: hur många bor i sverige
+Svar: Sveriges befolkning är cirka 10 miljoner.
+Slut.
+
+Fråga: vad är huvudstaden?
+Normaliserad fråga: vad är huvudstaden
+Fråga med minne: vad är sveriges huvudstad
+Svar: Sveriges huvudstad är stockholm.
+Slut.
+
+Fråga: hur påverkar ai samhället
+Normaliserad fråga: hur påverkar ai samhället
+Fråga med minne: hur påverkar ai samhället
+Svar: Ai påverkar samhället genom att förändra hur vi arbetar, kommunicerar och löser problem.
+Slut.
+
+Fråga: vad är svenska
+Normaliserad fråga: vad är svenska
+Fråga med minne: vad är svenska
+Svar: Svenska är ett språk som talas främst i sverige och delar av finland.
+Slut.
+
+Fråga: vad är finland
+Normaliserad fråga: vad är finland
+Fråga med minne: vad är finland
+Svar: Historia handlar om det som har hänt i det förflutna
+Slut.
+
+Fråga: vad är finland
+Normaliserad fråga: vad är finland
+Fråga med minne: vad är finland
+Svar: Arbete är en aktivitet där man utför uppgifter för att skapa värde
+Slut.
+
+Fråga: varför är stockholm viktigt
+Normaliserad fråga: varför är stockholm viktigt
+Fråga med minne: varför är stockholm viktigt
+Svar: Stockholm är ai viktigt eftersom det kan automatisera uppgifter analysera stora mängder data och hjälpa människor fatta bättre be
+Slut.
+
+Fråga: vad är en stad?
+Normaliserad fråga: vad är en stad
+Fråga med minne: vad är en stad
+Svar: En stad är en större tätort där många människor bor.
+Slut.
+

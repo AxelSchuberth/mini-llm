@@ -22,11 +22,60 @@ max_new_tokens = 20
 device = "mps" if torch.backends.mps.is_available() else "cpu"
 
 # ----------------------------
+# Minne
+# ----------------------------
+last_topic = None
+
+# ----------------------------
+# Normalisering
+# ----------------------------
+def normalize_question(text):
+    text = text.lower().strip()
+
+    replacements = {
+        "va ": "vad ",
+        "va e ": "vad är ",
+        "vad e ": "vad är ",
+        "svergie": "sverige",
+        "sveirge": "sverige",
+        "stockhom": "stockholm",
+        "stokholm": "stockholm",
+    }
+
+    for wrong, correct in replacements.items():
+        text = text.replace(wrong, correct)
+
+    text = re.sub(r"[?!]+", "", text)
+    text = re.sub(r"\s+", " ", text)
+
+    return text.strip()
+
+def update_topic(question):
+    topics = ["sverige", "stockholm", "ai", "eu", "fotboll", "python", "internet"]
+    for topic in topics:
+        if topic in question:
+            return topic
+    return None
+
+def apply_memory(question, topic):
+    if topic is None:
+        return question
+
+    if question in ["vad är huvudstaden", "vad heter huvudstaden", "huvudstad"]:
+        if topic == "sverige":
+            return "vad är sveriges huvudstad"
+
+    if question in ["hur många bor där", "befolkning"]:
+        if topic == "sverige":
+            return "hur många bor i sverige"
+
+    return question
+
+# ----------------------------
 # Tokenizer
 # ----------------------------
 class Tokenizer:
     def __init__(self, vocab):
-        self.vocab = vocab
         self.stoi = {w: i for i, w in enumerate(vocab)}
         self.itos = {i: w for i, w in enumerate(vocab)}
 
@@ -34,8 +83,7 @@ class Tokenizer:
         return re.findall(r"\w+", text.lower())
 
     def encode(self, text):
-        tokens = self.tokenize(text)
-        return [self.stoi[w] for w in tokens if w in self.stoi]
+        return [self.stoi[w] for w in self.tokenize(text) if w in self.stoi]
 
     def decode(self, indices):
         return " ".join([self.itos[i] for i in indices if i in self.itos])
@@ -48,6 +96,64 @@ with open("vocab_qa.json", "r", encoding="utf-8") as f:
 
 tokenizer = Tokenizer(vocab)
 vocab_size = len(vocab)
+
+# ----------------------------
+# Ladda data (RAG)
+# ----------------------------
+qa_pairs = []
+
+def load_qa():
+    global qa_pairs
+    qa_pairs = []
+
+    with open("data_qa.txt", "r", encoding="utf-8") as f:
+        content = f.read().lower()
+
+    blocks = content.split("slut.")
+    for block in blocks:
+        if "fråga:" in block and "svar:" in block:
+            try:
+                q = block.split("fråga:")[1].split("svar:")[0].strip()
+                a = block.split("svar:")[1].strip()
+                qa_pairs.append((normalize_question(q), a))
+            except:
+                pass
+
+load_qa()
+
+# ----------------------------
+# Similarity (bättre)
+# ----------------------------
+STOPWORDS = {
+    "vad", "är", "en", "ett", "i", "på", "och", "som",
+    "det", "den", "de", "kan", "förklara", "kort", "enkelt"
+}
+
+def important_words(text):
+    words = re.findall(r"\w+", text.lower())
+    return {w for w in words if w not in STOPWORDS}
+
+def similarity(a, b):
+    a_words = important_words(a)
+    b_words = important_words(b)
+
+    if len(a_words) == 0 or len(b_words) == 0:
+        return 0
+
+    return len(a_words & b_words) / len(a_words | b_words)
+
+def find_best_match(user_question):
+    best_score = 0
+    best_answer = None
+
+    for q, a in qa_pairs:
+        score = similarity(user_question, q)
+
+        if score > best_score:
+            best_score = score
+            best_answer = a
+
+    return best_score, best_answer
 
 # ----------------------------
 # Modell
@@ -158,35 +264,52 @@ model.eval()
 # ----------------------------
 @app.route("/", methods=["GET", "POST"])
 def home():
+    global last_topic
+
     svar = ""
+    källa = ""
 
     if request.method == "POST":
-        fråga = request.form["fråga"]
+        fråga_original = request.form["fråga"]
+        fråga = normalize_question(fråga_original)
 
-        prompt = f"Fråga: {fråga}\nSvar:"
-        context = torch.tensor([tokenizer.encode(prompt)], dtype=torch.long).to(device)
+        new_topic = update_topic(fråga)
+        if new_topic is not None:
+            last_topic = new_topic
 
-        generated = model.generate(context)
-        text = tokenizer.decode(generated[0].tolist())
+        fråga = apply_memory(fråga, last_topic)
 
-        # Plocka ut bara svaret
-        clean_answer = text
+        score, answer = find_best_match(fråga)
 
-        if "svar" in clean_answer:
-            clean_answer = clean_answer.split("svar", 1)[1]
+        # 🔥 RAG
+        if score >= 0.75:
+            svar = answer.strip()
+            källa = "📚 Data"
 
-        if "slut" in clean_answer:
-            clean_answer = clean_answer.split("slut", 1)[0]
+        # 🤖 AI fallback
+        else:
+            prompt = f"Fråga: {fråga}\nSvar:"
+            encoded = tokenizer.encode(prompt)
 
-        svar = clean_answer.strip()
+            if len(encoded) == 0:
+                svar = "Jag förstod inte frågan."
+                källa = "🤖 AI"
+            else:
+                context = torch.tensor([encoded], dtype=torch.long).to(device)
+                generated = model.generate(context)
+                text = tokenizer.decode(generated[0].tolist())
+
+                if "svar" in text:
+                    text = text.split("svar", 1)[1]
+
+                if "slut" in text:
+                    text = text.split("slut", 1)[0]
+
+                svar = text.strip()
+                källa = "🤖 AI"
 
         if len(svar) > 0:
             svar = svar[0].upper() + svar[1:]
-
-        with open("user_data.txt", "a", encoding="utf-8") as f:
-            f.write(f"Fråga: {fråga}\n")
-            f.write(f"Svar: {svar}\n")
-            f.write("Slut.\n\n")
 
     return f"""
 <!DOCTYPE html>
@@ -198,11 +321,12 @@ def home():
     <h1>Mini-LLM</h1>
 
     <form method="post">
-        <input name="fråga" style="width:300px; padding:10px;" placeholder="Ställ en fråga..." />
+        <input name="fråga" style="width:350px; padding:10px;" placeholder="Ställ en fråga..." />
         <button type="submit">Fråga</button>
     </form>
 
     <p style="margin-top:20px; font-size:18px;">{svar}</p>
+    <p style="font-size:14px; color:gray;">Källa: {källa}</p>
 </body>
 </html>
 """

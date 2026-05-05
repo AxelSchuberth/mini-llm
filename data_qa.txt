@@ -1628,3 +1628,123 @@ Slut.
 Fråga: Vilken stad är Sveriges huvudstad?
 Svar: Sveriges huvudstad är Stockholm.
 Slut.
+
+Fråga: Vad är Stockholm?
+Svar: Stockholm är Sveriges huvudstad och största stad och ligger vid Mälaren och Östersjön.
+Slut.
+
+Fråga: Vad är Göteborg?
+Svar: Göteborg är Sveriges näst största stad och ligger på västkusten.
+Slut.
+
+Fråga: Vad är Malmö?
+Svar: Malmö är en stor stad i södra Sverige nära Danmark.
+Slut.
+
+Fråga: Vad är Uppsala?
+Svar: Uppsala är en stad norr om Stockholm känd för sitt universitet och sin historia.
+Slut.
+
+Fråga: Vad är Västerås?
+Svar: Västerås är en stad i Västmanland vid Mälaren.
+Slut.
+
+Fråga: Vad är Örebro?
+Svar: Örebro är en stad i Mellansverige känd för sitt slott.
+Slut.
+
+Fråga: Vad är Linköping?
+Svar: Linköping är en stad i Östergötland med universitet och flygindustri.
+Slut.
+
+Fråga: Vad är Helsingborg?
+Svar: Helsingborg är en stad i Skåne vid Öresund mittemot Danmark.
+Slut.
+
+Fråga: Vad är Jönköping?
+Svar: Jönköping ligger vid södra änden av Vättern och är en viktig handelsstad.
+Slut.
+
+Fråga: Vad är Norrköping?
+Svar: Norrköping är en stad i Östergötland känd för sin industrihistoria.
+Slut.
+
+Fråga: Vad är Lund?
+Svar: Lund är en stad i Skåne känd för sitt universitet och sin domkyrka.
+Slut.
+
+Fråga: Vad är Umeå?
+Svar: Umeå är en stad i norra Sverige och ett centrum för utbildning och kultur.
+Slut.
+
+Fråga: Vad är Gävle?
+Svar: Gävle är en stad vid kusten i Gästrikland känd för Gävlebocken.
+Slut.
+
+Fråga: Vad är Borås?
+Svar: Borås är en stad i Västra Götaland känd för textilindustri.
+Slut.
+
+Fråga: Vad är Eskilstuna?
+Svar: Eskilstuna är en industristad i Södermanland.
+Slut.
+
+Fråga: Vad är Södertälje?
+Svar: Södertälje är en stad söder om Stockholm med stor industri.
+Slut.
+
+Fråga: Vad är Karlstad?
+Svar: Karlstad ligger vid Vänern och är känd som solstaden.
+Slut.
+
+Fråga: Vad är Täby?
+Svar: Täby är en kommun och tätort norr om Stockholm.
+Slut.
+
+Fråga: Vad är Växjö?
+Svar: Växjö är en stad i Småland känd för sin miljöprofil.
+Slut.
+
+Fråga: Vad är Halmstad?
+Svar: Halmstad är en kuststad i Halland känd för sina stränder.
+Slut.
+
+Fråga: Vad är Sundsvall?
+Svar: Sundsvall är en stad i Norrland känd för sin stenstad.
+Slut.
+
+Fråga: Vad är Luleå?
+Svar: Luleå är en stad i Norrbotten vid Bottenviken.
+Slut.
+
+Fråga: Vad är Trollhättan?
+Svar: Trollhättan är en stad känd för industri och vattenfall.
+Slut.
+
+Fråga: Vad är Kalmar?
+Svar: Kalmar är en stad vid Östersjön känd för sitt slott.
+Slut.
+
+Fråga: Vad är Skellefteå?
+Svar: Skellefteå är en stad i Västerbotten med stark industri.
+Slut.
+
+Fråga: Vad är Karlskrona?
+Svar: Karlskrona är en stad i Blekinge känd för sin marina historia.
+Slut.
+
+Fråga: Vad är Kristianstad?
+Svar: Kristianstad är en stad i Skåne omgiven av våtmarker.
+Slut.
+
+Fråga: Vad är Falun?
+Svar: Falun är en stad i Dalarna känd för koppargruvan.
+Slut.
+
+Fråga: Vad är Visby?
+Svar: Visby är en stad på Gotland känd för sina ringmurar.
+Slut.
+
+Fråga: Vad är Kiruna?
+Svar: Kiruna är en stad i norra Sverige känd för gruvdrift och norrsken.
+Slut.
