@@ -3,6 +3,7 @@ import torch.nn as nn
 import torch.nn.functional as F
 import os
 import json
+import re
 
 # ----------------------------
 # Inställningar
@@ -19,26 +20,46 @@ n_layers = 2
 device = "mps" if torch.backends.mps.is_available() else "cpu"
 
 # ----------------------------
-# Läs Q&A-data
+# Tokenizer
+# ----------------------------
+class Tokenizer:
+    def __init__(self, vocab):
+        self.vocab = vocab
+        self.stoi = {w: i for i, w in enumerate(vocab)}
+        self.itos = {i: w for i, w in enumerate(vocab)}
+
+    def tokenize(self, text):
+        return re.findall(r"\w+", text.lower())
+
+    def encode(self, text):
+        tokens = self.tokenize(text)
+        return [self.stoi[w] for w in tokens if w in self.stoi]
+
+    def decode(self, indices):
+        return " ".join([self.itos[i] for i in indices if i in self.itos])
+
+# ----------------------------
+# Läs data
 # ----------------------------
 with open("data_qa.txt", "r", encoding="utf-8") as f:
-    text = f.read().lower()
+    text = f.read()
 
-words = text.split()
-vocab = sorted(list(set(words)))
+# skapa vocab med tokenizer
+tokens = re.findall(r"\w+", text.lower())
+vocab = sorted(list(set(tokens)))
 vocab_size = len(vocab)
 
-stoi = {w: i for i, w in enumerate(vocab)}
-itos = {i: w for i, w in enumerate(vocab)}
-
+# spara vocab
 with open("vocab_qa.json", "w", encoding="utf-8") as f:
     json.dump(vocab, f, ensure_ascii=False)
 
-def encode(s):
-    return [stoi[w] for w in s.lower().split() if w in stoi]
+tokenizer = Tokenizer(vocab)
 
-data = torch.tensor(encode(text), dtype=torch.long)
+data = torch.tensor(tokenizer.encode(text), dtype=torch.long)
 
+# ----------------------------
+# Batch
+# ----------------------------
 def get_batch():
     ix = torch.randint(len(data) - block_size, (batch_size,))
     x = torch.stack([data[i:i + block_size] for i in ix])
@@ -136,26 +157,18 @@ class MiniTransformer(nn.Module):
         return logits, loss
 
 # ----------------------------
-# Skapa/ladda modell
+# Init modell
 # ----------------------------
 model = MiniTransformer().to(device)
-
-if os.path.exists("model_qa.pth"):
-    model.load_state_dict(torch.load("model_qa.pth", map_location=device))
-    print("QA-modell laddad")
-else:
-    print("Ny QA-modell skapad")
-
 optimizer = torch.optim.AdamW(model.parameters(), lr=learning_rate)
 
 # ----------------------------
 # Träning
 # ----------------------------
-print("Startar Q&A-träning...")
+print("Startar träning...")
 
 for i in range(max_iters):
     xb, yb = get_batch()
-
     logits, loss = model(xb, yb)
 
     optimizer.zero_grad()
@@ -169,5 +182,4 @@ for i in range(max_iters):
 # Spara
 # ----------------------------
 torch.save(model.state_dict(), "model_qa.pth")
-print("QA-modell sparad som model_qa.pth")
-print("QA-vocab sparad som vocab_qa.json")
+print("Modell sparad")

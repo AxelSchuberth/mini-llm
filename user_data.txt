@@ -375,3 +375,131 @@ Fråga: Vad tycker du om mig?
 Svar: Kvalitet beskriver hur bra något är jämfört med vad som förväntas.
 Slut.
 
+Fråga: Vad är en AI?
+Svar: Vad är en svara med korrekt svara kort och växter i ett område slut fråga vad är en ekonomi svar en ekonomi handlar om produktion handel och konsumtion av varor och tjänster slut fråga vad är en befolkning svar
+Slut.
+
+Fråga: Vad är Sverige?
+Svar: Vad är svara med korrekt svara kort och en cykel svar en cykel är ett fordon med två hjul som drivs med pedaler slut fråga vad är en bok svar en bok är en samling text eller bilder
+Slut.
+
+Fråga: Vad är Sverige?
+Svar: Sverige är ett land i norra europa
+Slut.
+
+Fråga: Vad är AI?
+Svar: Ai betyder artificiell intelligens och handlar om datorer som kan lösa uppgifter som brukar kräva mänsklig intelligens
+Slut.
+
+Fråga: Vad är Sverige?
+Svar: Sverige är ett land i norra europa
+Slut.
+
+Fråga: Vad är ett djur?
+Svar: Ett system är flera delar som arbetar tillsammans för ett gemensamt syfte
+Slut.
+
+Fråga: Vad är en människa?
+Svar: En kommun är en lokal administrativ enhet i sverige
+Slut.
+
+Fråga: Vad är en kommun?
+Svar: En kommun är en lokal administrativ enhet i sverige
+Slut.
+
+Fråga: vad är vetenskap?
+Svar: Vetenskap är ett sätt att undersöka världen med observationer tester och logik
+Slut.
+
+Fråga: Hur många bor i sverige?
+Svar: Sveriges befolkning är cirka 10 miljoner
+Slut.
+
+Fråga: Vad är Stockholm?
+Svar: Stockholm är sveriges huvudstad och största stad
+Slut.
+
+Fråga: Kan du säga 10 svenska städer?
+Svar: Stockholm är sveriges huvudstad
+Slut.
+
+Fråga: Vad är artificiell inteligens
+Svar: Ekonomi handlar om hur resurser används produceras och fördelas
+Slut.
+
+Fråga: Vad är Ekonomi?
+Svar: Ekonomi handlar om hur resurser används produceras och fördelas
+Slut.
+
+Fråga: Vad är vetenskap?
+Svar: Vetenskap är ett sätt att undersöka världen med observationer tester och logik
+Slut.
+
+Fråga: Vad är skillnaden mellan fakta och åsikt?
+Svar: Fakta är något som kan bevisas medan en åsikt är vad någon tycker
+Slut.
+
+Fråga: Hur påverkar AI samhället?
+Svar: Ai påverkar samhället genom att förändra hur vi arbetar kommunicerar och löser problem
+Slut.
+
+Fråga: Vad är framtiden för ai?
+Svar: Ai förväntas bli mer avancerad och användas inom fler områden i samhället
+Slut.
+
+Fråga: vad är snus?
+Svar: Python är ett populärt programmeringsspråk som är känt för att vara enkelt att läsa och använda
+Slut.
+
+Fråga: vad är Java
+Svar: Java är ett programmeringsspråk
+Slut.
+
+Fråga: säg ett programmeringsspråk
+Svar: Ett system är flera delar som arbetar tillsammans för ett gemensamt syfte
+Slut.
+
+Fråga: programering
+Svar: En parameter är ett värde i modellen som påverkar hur modellen fungerar och lär sig
+Slut.
+
+Fråga: Var talar man svenska
+Svar: Sverige ligger i norra europa på den skandinaviska halvön
+Slut.
+
+Fråga: Vad är ett problem?
+Svar: Ett problem är något som behöver lösas eller förstås
+Slut.
+
+Fråga: vad är lärande
+Svar: Lärande är processen att förstå och ta till sig ny kunskap
+Slut.
+
+Fråga: vad är jorden?
+Svar: Jorden är den planet vi lever på
+Slut.
+
+Fråga: va e sverige?
+Svar: Sverige är ett land i norra europa
+Slut.
+
+Fråga: va e svea
+Svar: En mini llm är en liten språkmodell som fungerar enligt liknande principer som större modeller men med mycket mindre kapacitet
+Slut.
+
+Fråga: svenska
+Svar: Svenska är ett språk som talas främst i sverige och delar av finland
+Slut.
+
+Fråga: vad är en llm
+Svar: En llm är en stor språkmodell som kan skapa och förstå text baserat på mönster i stora mängder data
+Slut.
+
+Fråga: va är python
+Svar: Python är ett populärt programmeringsspråk som är känt för att vara enkelt att läsa och använda
+Slut.
+
+Fråga: kan du något
+Svar: Self attention är en ai lär sig från data och lära sig hitta mönster som den sedan använder för att
+Slut.
+

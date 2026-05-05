@@ -3,22 +3,42 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 import json
+import re
 
 app = Flask(__name__)
 
 # ----------------------------
-# Inställningar (JUSTERADE)
+# Inställningar
 # ----------------------------
 block_size = 64
 n_embd = 128
 n_heads = 4
 n_layers = 2
 
-temperature = 0.2   # lägre = mer stabil
-top_k = 20          # fler val = mindre konstiga svar
-max_new_tokens = 30
+temperature = 0.2
+top_k = 5
+max_new_tokens = 20
 
 device = "mps" if torch.backends.mps.is_available() else "cpu"
+
+# ----------------------------
+# Tokenizer
+# ----------------------------
+class Tokenizer:
+    def __init__(self, vocab):
+        self.vocab = vocab
+        self.stoi = {w: i for i, w in enumerate(vocab)}
+        self.itos = {i: w for i, w in enumerate(vocab)}
+
+    def tokenize(self, text):
+        return re.findall(r"\w+", text.lower())
+
+    def encode(self, text):
+        tokens = self.tokenize(text)
+        return [self.stoi[w] for w in tokens if w in self.stoi]
+
+    def decode(self, indices):
+        return " ".join([self.itos[i] for i in indices if i in self.itos])
 
 # ----------------------------
 # Ladda vocab
@@ -26,14 +46,8 @@ device = "mps" if torch.backends.mps.is_available() else "cpu"
 with open("vocab_qa.json", "r", encoding="utf-8") as f:
     vocab = json.load(f)
 
-stoi = {w: i for i, w in enumerate(vocab)}
-itos = {i: w for i, w in enumerate(vocab)}
-
-def encode(s):
-    return [stoi[w] for w in s.lower().split() if w in stoi]
-
-def decode(l):
-    return " ".join([itos[i] for i in l])
+tokenizer = Tokenizer(vocab)
+vocab_size = len(vocab)
 
 # ----------------------------
 # Modell
@@ -96,14 +110,15 @@ class Block(nn.Module):
 class MiniTransformer(nn.Module):
     def __init__(self):
         super().__init__()
-        self.token_embedding = nn.Embedding(len(vocab), n_embd)
+        self.token_embedding = nn.Embedding(vocab_size, n_embd)
         self.position_embedding = nn.Embedding(block_size, n_embd)
         self.blocks = nn.Sequential(*[Block() for _ in range(n_layers)])
         self.ln_f = nn.LayerNorm(n_embd)
-        self.lm_head = nn.Linear(n_embd, len(vocab))
+        self.lm_head = nn.Linear(n_embd, vocab_size)
 
     def forward(self, x):
         B, T = x.shape
+
         tok_emb = self.token_embedding(x)
         pos_emb = self.position_embedding(torch.arange(T, device=device))
 
@@ -120,11 +135,6 @@ class MiniTransformer(nn.Module):
 
             logits = logits[:, -1, :]
             logits = logits / temperature
-
-            # mild repetition penalty
-            used_tokens = set(x[0].tolist())
-            for token in used_tokens:
-                logits[0, token] *= 0.95
 
             values, indices = torch.topk(logits, top_k)
             probs = F.softmax(values, dim=-1)
@@ -153,21 +163,20 @@ def home():
     if request.method == "POST":
         fråga = request.form["fråga"]
 
-        prompt = f"""Fråga: {fråga}
-Svara endast med korrekt fakta.
-Svara kort och tydligt.
-Svar:"""
-
-        context = torch.tensor([encode(prompt)], dtype=torch.long).to(device)
+        prompt = f"Fråga: {fråga}\nSvar:"
+        context = torch.tensor([tokenizer.encode(prompt)], dtype=torch.long).to(device)
 
         generated = model.generate(context)
-        text = decode(generated[0].tolist())
+        text = tokenizer.decode(generated[0].tolist())
 
+        # Plocka ut bara svaret
         clean_answer = text
-        if "svar:" in clean_answer:
-            clean_answer = clean_answer.split("svar:", 1)[1]
-        if "slut." in clean_answer:
-            clean_answer = clean_answer.split("slut.", 1)[0]
+
+        if "svar" in clean_answer:
+            clean_answer = clean_answer.split("svar", 1)[1]
+
+        if "slut" in clean_answer:
+            clean_answer = clean_answer.split("slut", 1)[0]
 
         svar = clean_answer.strip()
 
